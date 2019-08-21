@@ -56,8 +56,8 @@ int locationaftervalid;
 void setup()
 {
   Serial.begin(115200);   // Initialize serial communications with the PC
-//  lcd.init(); // initialize the LCD kalau I punya begin
-  lcd.begin();
+  lcd.init(); 
+//  lcd.begin();
   lcd.backlight(); // Turn on the blacklight and print a message.
   lcd.print("Turning on");
   delay(2000);
