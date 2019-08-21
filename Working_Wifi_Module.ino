@@ -57,11 +57,9 @@ void loop() {
   if (!client.connect(server, httpPort)) { //Connect to server using port httpPort
     Serial.println("connection failed");
     return;
-  }
-  
-  // We now create a URI for the request
-  String url = "/test/hello.php?data1=787348&data2=7387"; //File or Server page you want to communicate with. along with data
+  }//kayaknya ini ga usah
 
+  
   if (client.connect(server, 80)) 
   {
     //Serial.println("Connection established 1");
