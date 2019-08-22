@@ -129,6 +129,7 @@ int locationaftervalid= balanceString.lastIndexOf("validated") + 10; // find loc
 realbalanceString= balanceString.substring(locationaftervalid); //get the balance after the word validated // maybe change validated into a string then use strlen
 //Serial.print(realbalanceString);
 
+ 
 if(balanceString.indexOf("validated")<0) {
   lcd.clear();
   lcd.setCursor(0,0);
@@ -137,6 +138,16 @@ if(balanceString.indexOf("validated")<0) {
   return;
 }
 
+if(realbalanceString.indexOf("error")>=0){
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Balance is");
+  lcd.setCursor(0,1);
+  lcd.print("not enough");
+  delay(3000);
+  return;
+}
+ 
 lcd.clear();
 lcd.setCursor(0,0);
 lcd.print("Transaction");
