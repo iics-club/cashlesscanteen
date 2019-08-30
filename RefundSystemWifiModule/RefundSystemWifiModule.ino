@@ -1,14 +1,18 @@
 #include <ESP8266WiFi.h>
 
-//const char* ssid     = "Melissa home"; //Wi-Fi SSID // change 
-//const char* password = "MATMEL61"; //Wi-Fi Password  // change
+const char* ssid     = "cashless"; //Wi-Fi SSID // change 
+const char* password = "CashLessCanteen0101"; //Wi-Fi Password  // change
 
-const char* ssid     = "AndroidAP8FD2"; //Other Wi-Fi SSID 
-const char* password = "Change password"; //Other Wi-Fi Password
+//const char* ssid     = "IICS-gym"; //Wi-Fi SSID // change 
+//const char* password = "gym@iics"; //Wi-Fi Password  // change
+
+//const char* ssid     = "Melissa home"; //Other Wi-Fi SSID 
+//const char* password = "MATMEL61"; //Other Wi-Fi Password
 
 //char server[] = "192.168.1.13"; //IP address of Halim.
 //char server[]= "192.168.1.8";//IP address for tenda
-String server="cashlesscanteeniics.com";
+//String server="cashlesscanteeniics.com";
+String server="192.168.137.1"; //IP Address of Theo's server
 
 //chsnge Server IP or domain name
 
@@ -28,7 +32,7 @@ void setup() {
   
   while (WiFi.status() != WL_CONNECTED) { //Wait till connects
     delay(500);
-    //Serial.print(".");
+    Serial.print(".");
   }
 
   //Serial.println("");

@@ -36,6 +36,9 @@ lcd.clear();
 SPI.begin();      // Init SPI bus
 mfrc522.PCD_Init();   // Init MFRC522
 
+outs=false;
+outs2=false;
+
 do{ 
 UID();
 }while(outs2 == false);
@@ -63,7 +66,7 @@ lcd.setCursor(0,0);
 lcd.print("Your balance is:");
 lcd.setCursor(0,1);
 lcd.print(realbalanceString);
-delay(1500);
+delay(3000);
 }
 
 void scanfromwifi(){
